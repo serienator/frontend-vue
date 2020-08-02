@@ -6,12 +6,29 @@
   <title>Serienator</title>
 </head>
 <body>
-<div id="container">
-  <ol>
-    <li v-for="item in items">
-      {{ item.name }} {{item.surname}}
-    </li>
-  </ol>
-</div>
+<b-container fluid id="container">
+  <b-navbar variant="faded" type="light">
+    <b-navbar-brand href="#">BootstrapVue</b-navbar-brand>
+  </b-navbar>
+
+  <b-row>
+    <b-card-group deck v-for="item in items" class="col-3">
+      <b-card
+          :title="item.name"
+          :img-src="item.imageUrl"
+          img-top
+          img-height = "200"
+          class="mb-2"
+      >
+        <b-card-text>
+          {{item.description}}
+        </b-card-text>
+
+        <b-button variant="outline-primary" href="#" variant="primary">Seasons</b-button>
+      </b-card>
+    </b-card-group>
+  </b-row>
+</b-container>
 </body>
 </html>
+
