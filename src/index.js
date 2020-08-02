@@ -1,8 +1,13 @@
 import Vue from 'vue';
+import {getItems} from './api/itemsAPI';
 
-new Vue({
+const app = new Vue({
   el: '#container',
   data: {
-    value: 'Hello Serienator'
+    items: []
+  },
+  created() {
+    this.items = getItems()
   }
 });
+
