@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
@@ -13,7 +14,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
-        }
+        },
       }
     ]
   },
@@ -21,6 +22,11 @@ module.exports = {
     alias: {
       vue: 'vue/dist/vue.js'
     }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: 9000,
+    hot: true
   },
   plugins: [htmlPlugin]
 };

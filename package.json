@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start:dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "vue": "^2.6.11"
